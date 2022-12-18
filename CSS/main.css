@@ -239,7 +239,7 @@ footer p {
   color: white
 }
 footer .container .social-icons i::before {
-  --mainColor: var(--iconColor, #c2cfd7);
+  color: white;
   --iconSize: 1rem;
   margin-left: 1rem
 }
