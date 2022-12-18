@@ -9,7 +9,7 @@
   --iconColor: #c2cfd7;
   --mainColor: #fc758c;
   --headingColor: #838383;
-  --sectionPadding: 1.5rem;
+  --sectionPadding: 2rem;
   --iconSize: 1.25rem;
   --gapLinks: 1rem
 }
@@ -42,6 +42,21 @@ i::before {
   color: var(--mainColor, #fc758c);
   cursor: pointer
 }
+button {
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  color: var(--mainColor, #fc758c);
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+  background-color: var(--mainColor, #fc758c);
+}
+
 
 .container {
   width: 95%
@@ -73,7 +88,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  padding: var(--sectionPadding, 1.5rem) 0
+  background-color: white;
 }
 header .container .logo {
   height: 75px
@@ -89,6 +104,8 @@ header .container nav {
     display: none
   }
 }
+
+
 nav ul {
   display: none;
   flex-direction: column;
@@ -105,14 +122,14 @@ nav ul {
 nav i:hover + ul {
   display: flex
 }
-nav ul li a {
+ul li a {
   color: var(--headingColor, #838383);
   padding: .5rem 1rem;
   transition: .2s;
   display: block;
   width: fit-content
 }
-nav ul li a:hover {
+ul li a:hover {
   background-color: var(--mainColor, #fc758c);
   color: white;
   margin-left: .5rem
@@ -139,35 +156,94 @@ nav ul li a:hover {
 
 /* Section Landing Styling Start */
 .landing {
-  
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor);
+  text-align: center;
+  color: white
 }
-
-
-
-
+.landing .container h1 {
+  width: 100%;
+  letter-spacing: .75rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem
+}
+.landing .container p {
+  margin-bottom: 2rem;
+  width: 100%
+}
 /* Section Landing Styling End */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
- 
+/* Section Gallery Styling Start */
+.gallery .container .icons {
+  gap: var(--gapLinks, 1rem);
+  margin: 4rem 0;
+  width: 100%
+}
+.gallery .container .links-gallery {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: .25rem;
+  width: fit-content;
+  text-transform: capitalize;
+  margin-bottom: 4rem
+}
+.links-gallery li a:hover {
+  margin-left: 0
+}
+.gallery .gallery-view {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5rem
 }
  
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
- 
+.gallery .gallery-view div {
+  display: inherit;
+  gap: inherit;
+  grid-template-columns: 1fr;
+  height: fit-content
 }
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
- 
+.gallery .gallery-view img {
+  width: 100%;
+  display: block
 }
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    
+
+@media (min-width: 768px) { 
+  .gallery .gallery-view { 
+  grid-template-columns: repeat(3, 1fr)
+  }
 }
- 
-/* Extra extra large devices (extra large desktops, 1400px and up) */
-@media (min-width: 1400px) {  
-    
+.gallery .container button {
+  margin-top: 2rem;
+  color: white;
+  background-color: var(--mainColor, #fc758c)
 }
+/* Section Gallery Styling End */
+
+/* Section Footer Styling Start */
+footer {
+  margin-top: 2rem;
+  background-color: var(--mainColor, #fc758c);
+  padding: 1rem 0;
+  color: var(--iconColor, #c2cfd7);
+  text-align: center
+}
+footer p {
+  width: 100%;
+  margin-bottom: .5rem;
+  color: white
+}
+footer .container .social-icons i::before {
+  --mainColor: var(--iconColor, #c2cfd7);
+  --iconSize: 1rem;
+  margin-left: 1rem
+}
+footer .container .social-icons i:first-child:before {
+  margin-left: 0
+}
+/* Section Footer Styling End */
