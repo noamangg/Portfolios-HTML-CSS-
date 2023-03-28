@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+:root {
+  --yellow-color: #ffc107;
+  --main-bg-color: #1e1e28;
+  --card-bg-color: #242430;
+  --p-color: #8c8c8e;
+  --progress-color: #191923;
+
+  --num: 85;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(140, 140, 142, 0.1);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+aside > div::-webkit-scrollbar-thumb {
+  background-color: rgb(140, 140, 142, 0.1);
+}
+
+aside > div::-webkit-scrollbar {
+  width: 4px;
+}
+
+body {
+  height: 200vh;
+}
+aside {
+  min-width: 300px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+aside > div {
+  position: fixed;
+  width: 300px;
+  max-height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+aside .skills-prog .coding {
+  grid-template-columns: 1fr;
+}
+aside .skills-prog .coding > span::before {
+  content: attr(data-name);
+  position: absolute;
+  top: -1.5rem;
+  font-size: 14px;
+  left: 0;
+}
+aside .skills-prog .coding > span::after {
+  content: attr(data-width);
+  position: absolute;
+  top: -1.5rem;
+  font-size: 14px;
+  right: 0;
+  color: var(--p-color, #8c8c8e);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+aside .knowledge > span::before {
+  content: "\f00c";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 600;
+  position: absolute;
+  color: var(--yellow-color, #ffc107);
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .social .social-box a {
+  display: block;
+  transition: 0.3s;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--card-bg-color, #242430);
+  text-decoration: none;
+}
+aside .social .social-box a:hover {
+  background-color: var(--card-bg-color, #242430);
+  transform: translateY(-10px);
+  background-color: var(--card-bg-color);
+  border-color: rgb(255, 255, 255, 0.2);
+}
+
+aside .skills-circle .circle-warp {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 5px solid var(--progress-color, #191923);
+  stroke: var(--yellow-color, #ffc107);
+  stroke-width: 100px;
+}
+
+.skills .card {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .card .parent {
+  height: 90px;
+  width: 90px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.skills .card .parent::before,
+.skills .card .parent::after {
+  left: 50%;
+  position: absolute;
+  font-weight: 400;
+}
+.skills .card .parent::before {
+  content: attr(data-progress);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.skills .card .parent::after {
+  transform: translateX(-50%) ;
+  content: attr(data-language);
+  bottom: -1.2rem;
+}
+.skills .card .parent svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(270deg);
+}
+.skills .card .parent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3px;
+  stroke: var(--progress-color, #191923);
+}
+
+.skills .card .parent svg circle:last-child {
+  stroke: var(--yellow-color, #ffc107);
+  stroke-dasharray: 220;
+  stroke-dashoffset: calc(220 - (220 * var(--num)) / 100);
+}
+main {
+  flex: 1;
+}
+header {
+  display: none;
+}
+
+@media (max-width:1024px) {
+  aside {
+    display: none;
+  }
+  header {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .3);
+  }
+}
+
+header:has(i:hover) +  aside{
+  display: block;
+}
+header:has(i:hover) {
+  display: none;
+}
+
+icon:hover + aside {
+display: block;
+}
