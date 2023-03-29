@@ -195,6 +195,9 @@
 .m-0 {
   margin: 0;
 }
+.m-10 {
+  margin: 10px;
+}
 .m-15 {
   margin: 15px;
 }
@@ -323,6 +326,9 @@
 .fs-16 {
   font-size: 16px;
 }
+.fs-20 {
+  font-size: 20px;
+}
 .fs-25 {
   font-size: 25px;
 }
@@ -331,6 +337,9 @@
 }
 .fw-400{
   font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
 }
 .fw-bold {
   font-weight: bold;
@@ -362,8 +371,16 @@
 }
 
 .btn-shape {
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: .6rem 1.8rem;
+  border-radius: 4px;
+  font-size: .8rem;
+  background-color: var(--yellow-color, #ffc107);
+  color: var(--main-bg-color, #191923);
+  outline: none;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .b-b-grey {
   border-bottom: 1px solid rgb(140, 140, 142, .2);

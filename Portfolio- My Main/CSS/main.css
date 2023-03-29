@@ -19,6 +19,17 @@
 ::-webkit-scrollbar {
   width: 10px;
 }
+
+main {
+  flex: 1;
+}
+header {
+  display: none;
+}
+
+
+
+/* Section Aside Start */
 aside > div::-webkit-scrollbar-thumb {
   background-color: rgb(140, 140, 142, 0.1);
 }
@@ -27,14 +38,39 @@ aside > div::-webkit-scrollbar {
   width: 4px;
 }
 
-body {
-  height: 200vh;
-}
 aside {
   min-width: 300px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 9;
+  position: relative;
 }
+
+@media (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+  header {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+  }
+  main {
+    padding-top: 55px;
+  }
+}
+
+header:has(i:hover) + aside {
+  display: block;
+}
+
+
+
 aside > div {
   position: fixed;
   width: 300px;
@@ -42,6 +78,15 @@ aside > div {
   overflow-y: auto;
   top: 0;
   left: 0;
+}
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  aside {
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 aside .skills-prog .coding {
@@ -64,7 +109,6 @@ aside .skills-prog .coding > span::after {
   font-size: 13px;
   font-weight: 400;
 }
-
 aside .knowledge > span::before {
   content: "\f00c";
   font-family: var(--fa-style-family-classic);
@@ -107,7 +151,6 @@ aside .skills-circle .circle-warp {
   stroke: var(--yellow-color, #ffc107);
   stroke-width: 100px;
 }
-
 .skills .card {
   position: relative;
   width: 100%;
@@ -134,7 +177,7 @@ aside .skills-circle .circle-warp {
   transform: translate(-50%, -50%);
 }
 .skills .card .parent::after {
-  transform: translateX(-50%) ;
+  transform: translateX(-50%);
   content: attr(data-language);
   bottom: -1.2rem;
 }
@@ -150,42 +193,70 @@ aside .skills-circle .circle-warp {
   stroke-width: 3px;
   stroke: var(--progress-color, #191923);
 }
-
 .skills .card .parent svg circle:last-child {
   stroke: var(--yellow-color, #ffc107);
   stroke-dasharray: 220;
   stroke-dashoffset: calc(220 - (220 * var(--num)) / 100);
 }
-main {
-  flex: 1;
+
+/* Section Aside End */
+
+/* Section Welcome Start */
+
+.welcome-section {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
-header {
-  display: none;
+.welcome-section::before,
+.welcome-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.welcome-section::before {
+  background: url(../imgs/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.welcome-section::after {
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
-@media (max-width:1024px) {
-  aside {
-    display: none;
-  }
-  header {
-    display: block;
-    position: absolute;
-    width: 100%;
-    padding: 15px 20px;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    box-shadow: 0 0 10px rgb(0, 0, 0, .3);
-  }
+h1 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.main-subtitle {
+  margin: 1rem 0;
+}
+.main-subtitle > span:not(#intro-bar) {
+  color: var(--yellow-color, #ffc107);
+}
+.main-subtitle > span#intro-bar {
+  margin: 0 0.5rem;
 }
 
-header:has(i:hover) +  aside{
-  display: block;
+main .projects .projects-container,
+main .recommendations .recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-header:has(i:hover) {
-  display: none;
+.projects-container .project p,
+.recommendations-container .recommendation p {
+  line-height: 1.6;
 }
 
-icon:hover + aside {
-display: block;
+@media (max-width: 1024px) {
 }
+/* Section Welcome End */
