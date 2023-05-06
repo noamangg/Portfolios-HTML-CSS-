@@ -13,13 +13,20 @@
 
   --num: 85;
 }
+
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(140, 140, 142, 0.1);
 }
 ::-webkit-scrollbar {
   width: 10px;
 }
-
+body {
+  background-color: #191923;
+}
+body > div {
+  max-width: 1666px;
+}
 main {
   flex: 1;
 }
@@ -65,15 +72,15 @@ aside {
   }
 }
 
-header:has(i:hover) + aside {
+/* header:has(i:hover) + aside {
   display: block;
-}
+} */
 
 
 
 aside > div {
-  position: fixed;
   width: 300px;
+  position: fixed;
   max-height: 100vh;
   overflow-y: auto;
   top: 0;
@@ -85,7 +92,7 @@ aside > div {
   }
   aside {
     position: absolute;
-    z-index: 1;
+    z-index: 99;
   }
 }
 
@@ -207,13 +214,14 @@ aside .skills-circle .circle-warp {
   width: 100%;
   min-height: 350px;
   position: relative;
-
+  background: url(../imgs/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
 }
-.welcome-section::before,
 .welcome-section::after {
   content: "";
   width: 100%;
@@ -222,11 +230,6 @@ aside .skills-circle .circle-warp {
   position: absolute;
   top: 0;
   left: 0;
-}
-.welcome-section::before {
-  background: url(../imgs/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .welcome-section::after {
   background-color: rgb(0, 0, 0, 0.3);
@@ -246,7 +249,6 @@ h1 {
 .main-subtitle > span#intro-bar {
   margin: 0 0.5rem;
 }
-
 main .projects .projects-container,
 main .recommendations .recommendations-container {
   display: grid;
@@ -256,6 +258,23 @@ main .recommendations .recommendations-container {
 .recommendations-container .recommendation p {
   line-height: 1.6;
 }
+.project a {
+  width: fit-content;
+}
+.project:hover a {
+  animation: read-more-project .25s ease-in-out alternate infinite;
+}
+
+@keyframes read-more-project {
+  form {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(20px);
+
+  }
+}
+
 
 @media (max-width: 1024px) {
 }

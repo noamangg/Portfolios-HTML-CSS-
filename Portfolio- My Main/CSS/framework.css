@@ -36,6 +36,9 @@
 
 @media (max-width: 767px) {
 }
+.d-none {
+  display: none;
+}
 .d-block {
   display: block;
 }
