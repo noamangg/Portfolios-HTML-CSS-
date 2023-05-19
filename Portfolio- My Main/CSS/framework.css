@@ -384,6 +384,11 @@
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
+  transition: .25s;
+}
+.btn-shape:hover {
+  color: #ffc107;
+  background-color:#242430;
 }
 .b-b-grey {
   border-bottom: 1px solid rgb(140, 140, 142, .2);

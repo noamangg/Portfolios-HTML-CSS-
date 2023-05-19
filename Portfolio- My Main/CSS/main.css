@@ -14,6 +14,11 @@
   --num: 85;
 }
 
+::selection {
+  background-color: #f8ba00;
+  color: white;
+}
+
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(140, 140, 142, 0.1);
