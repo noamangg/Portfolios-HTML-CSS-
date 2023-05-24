@@ -35,6 +35,9 @@ body > div {
 main {
   flex: 1;
 }
+
+
+
 header {
   display: none;
 }
@@ -77,6 +80,7 @@ aside {
   }
 }
 
+
 /* header:has(i:hover) + aside {
   display: block;
 } */
@@ -89,7 +93,6 @@ aside > div {
   max-height: 100vh;
   overflow-y: auto;
   top: 0;
-  left: 0;
 }
 @media (max-width: 767px) {
   ::-webkit-scrollbar {
@@ -257,7 +260,13 @@ h1 {
 main .projects .projects-container,
 main .recommendations .recommendations-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 400px) {
+  main .projects .projects-container,
+main .recommendations .recommendations-container {
+  grid-template-columns: 1fr;
+}
 }
 .projects-container .project p,
 .recommendations-container .recommendation p {
@@ -284,3 +293,11 @@ main .recommendations .recommendations-container {
 @media (max-width: 1024px) {
 }
 /* Section Welcome End */
+
+
+@media (max-width: 300px) {
+  body > div.main-page > main {
+      padding: 10px ; 
+      padding-top: 55px;
+    }
+  }
