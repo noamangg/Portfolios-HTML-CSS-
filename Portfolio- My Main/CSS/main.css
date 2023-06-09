@@ -295,9 +295,40 @@ main .recommendations .recommendations-container {
 /* Section Welcome End */
 
 
-@media (max-width: 300px) {
-  body > div.main-page > main {
-      padding: 10px ; 
-      padding-top: 55px;
-    }
+
+
+
+  footer {
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
   }
+  .hover-c-yellow {
+    transition: .25s;
+
+  }
+  .hover-c-yellow:hover {
+    color:var(--yellow-color, #f8ba00);
+  }
+
+  @media (max-width: 300px) {
+    body > div.main-page > main {
+        padding: 10px; 
+        padding-bottom: 0;
+        padding-top: 55px;
+      }
+      footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: calc(100% + 20px);
+        position: relative;
+        left: -10px;
+        flex-flow: column wrap;
+        text-align: center;
+        justify-content: center;
+      }
+      footer * {
+        margin: 0;
+      }
+    }
+  
