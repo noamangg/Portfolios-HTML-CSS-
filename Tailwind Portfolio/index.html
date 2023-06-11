@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noaman</title>
+  <title>Noaman Grewatiy Portfolio</title>
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="dist/output.css">
-</head>
-<body class="m-0">
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0">
+  <main>
+    <header class="shadow-lg">
+      <div class="container flex justify-between gap-2 p-5 m-auto">
+        <div class=" logo text-blue-600 font-bold">Grewatiy</div>
+        <div class="options flex gap-4 justify-center items-center">
+          <i class="fa-solid fa-moon"></i>
+          <button
+            class="bg-blue-600 text-white px-2 py-1 rounded text-sm outline-none duration-75 hover:bg-slate-300 hover:text-blue-600">
+            Resume
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class=" mt-10">
+      <div class="container p-5 m-auto">
+        <div class="info text-center">
+          <h2 class="text-4xl font-bold mb-2 text-gray-900">Noaman Grewatiy</h2>
+          <h3 class="mb-3 text-sm text-white w-fit m-auto flex gap-2"><span
+              class="bg-blue-600 px-2 py-1 rounded">Software Engineer</span><span
+              class="bg-gray-900 px-2 py-1 rounded">Front End Developer</span></h3>
+          <p class="max-w-md m-auto">Co-Founder of one of the most great company in the world, specialized in business
+            solution for startups
+          </p>
+          <div class="social flex gap-6 mt-6 justify-center">
+            <a href=""><i class="text-3xl text-blue-900 fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="text-3xl text-blue-600 fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="text-3xl text-gray-900 fa-brands fa-square-github"></i></a>
+            <a href=""><i class="text-3xl text-pink-600 fa-brands fa-square-instagram"></i></a>
+          </div>
+        </div>
+        <div class="image overflow-hidden w-fit m-auto mt-10 block bg-gradient-to-b from-blue-700 rounded-full">
+          <img class="w-80 h-80 object-cover" src="img/dev-ed-wave.png" alt="avatar">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container p-5 m-auto">
+        <h3>Service I Offer</h3>
+        <p>Since the beginning of my journey as a front end developer, I developed a lot of projects, I work remotely as
+          a developer with <span class="text-blue-700">Vamill Agency</span> I love to develope services and sites for
+          helping people and business, I like to <span class="text-blue-700">contribute</span> with talent people </p>
+          <div class="services">
+            <div class="service">
+              <img src="img/design.png" alt="design">
+              <h4>Beautiful Design</h4>
+              <p>Creating fancy designs for you, with nice 3D elements </p>
+              <h5>Design tools I use</h5>
+              <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+            <div class="service">
+              <img src="img/code.png" alt="code">
+              <h4>Clean Code</h4>
+            </div>
+            <div class="service">
+              <img src="img/consulting.png" alt="design">
+              <h4>Beautiful Design</h4>
+            </div>
+          </div>
+      </div>
+    </section>
+
+  </main>
 
   <script src="js/all.min.js"></script>
 </body>
+
 </html>
