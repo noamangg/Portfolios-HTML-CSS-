@@ -21,9 +21,9 @@
 </head>
 
 <body class="m-0">
-  <main class="">
-    <header class="shadow-lg">
-      <div class="container flex justify-between gap-2 p-5 m-auto">
+  <main class="relative">
+    <header class="shadow-lg fixed top-0 w-full z-50 bg-white">
+      <div class="container flex justify-between gap-2 px-5 py-3 m-auto">
         <div class=" logo text-blue-600 font-bold">Grewatiy</div>
         <div class="options flex gap-4 justify-center items-center">
           <i class="fa-solid fa-moon"></i>
@@ -34,9 +34,9 @@
         </div>
       </div>
     </header>
-    <section class=" mt-10">
-      <div class="container p-5 m-auto">
-        <div class="info text-center">
+    <section class=" min-h-screen flex justify-center items-center">
+      <div class="container px-5 m-auto">
+        <div class="info text-center mt-10">
           <h2 class="text-4xl font-bold mb-2 text-gray-900">Noaman Grewatiy</h2>
           <h3 class="mb-3 text-sm text-white w-fit m-auto flex gap-2"><span
               class="bg-blue-600 px-2 py-1 rounded">Software Engineer</span><span
@@ -45,10 +45,10 @@
             solutions for startups.
           </p>
           <div class="social flex gap-6 mt-6 justify-center">
-            <a href=""><i class="text-3xl text-blue-900 fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="text-3xl text-blue-600 fa-brands fa-square-facebook"></i></a>
-            <a href=""><i class="text-3xl text-gray-900 fa-brands fa-square-github"></i></a>
-            <a href=""><i class="text-3xl text-pink-600 fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/noaman-grewatiy/"><i class="text-3xl text-blue-900 fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href=""><i class="text-3xl text-blue-600 fa-brands fa-square-facebook"></i></a>
+            <a target="_blank" href="https://github.com/noamangg"><i class="text-3xl text-gray-900 fa-brands fa-square-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/noaman_grewatiy/"><i class="text-3xl text-pink-600 fa-brands fa-square-instagram"></i></a>
           </div>
         </div>
         <div class="image overflow-hidden w-fit m-auto mt-10 block bg-gradient-to-b from-blue-700 rounded-full">
@@ -58,14 +58,14 @@
     </section>
     <section>
       <div class="container p-5 m-auto">
-        <h3 class="text-2xl font-medium text-white bg-blue-600 px-4 py-2 rounded-lg mb-4 mt-10 w-fit m-auto">Service We
+        <h3 class="text-2xl font-medium text-white bg-blue-600 px-4 rounded-lg mb-4 mt-10 w-fit m-auto">Service We
           Offer</h3>
         <p class="max-w-lg m-auto text-center">Since the beginning of my journey as a front-end developer, I have
           developed a lot of projects. I work remotely as a developer with <span class="text-blue-700">Vamill
             Agency</span>Vamill Agency. I love to develop services and sites to help people and businesses. I like to
           <span class="text-blue-700">contribute</span> with talented people </p>
         <div class="services grid gap-10 lg:grid-cols-3 md:grid-cols-2 justify-center items-center py-10">
-          <div class="service shadow-2xl rounded-lg p-10 text-center">
+          <div class="service shadow-2xl rounded-lg p-10 text-center hover:-translate-y-5 duration-75 cursor-pointer">
             <img class="w-32 m-auto" src="img/design.png" alt="design">
             <h4 class="my-2 font-bold text-xl">Beautiful Design</h4>
             <p class="">Creating fancy designs for you, with nice 3D elements </p>
@@ -76,7 +76,7 @@
               <li>Figma</li>
             </ul>
           </div>
-          <div class="service shadow-2xl rounded-lg p-10 text-center">
+          <div class="service shadow-2xl rounded-lg p-10 text-center hover:-translate-y-5 duration-75 cursor-pointer">
             <img class="w-32 m-auto" src="img/code.png" alt="design">
             <h4 class="my-2 font-bold text-xl">Clean Code</h4>
             <p class="">writing a clean code with last updates, easy to read and modify in the future</p>
@@ -87,7 +87,7 @@
               <li>Chrome Browser</li>
             </ul>
           </div>
-          <div class="service shadow-2xl rounded-lg p-10 text-center">
+          <div class="service shadow-2xl rounded-lg p-10 text-center hover:-translate-y-5 duration-75 cursor-pointer">
             <img class="w-32 m-auto" src="img/consulting.png" alt="design">
             <h4 class="my-2 font-bold text-xl">Feel Free With Us</h4>
             <p class="">You will become our friend and we will work together to achieve the goals</p>
@@ -103,19 +103,19 @@
     </section>
     <section>
       <div class="container p-5 m-auto">
-        <h3 class="text-2xl font-medium text-white bg-blue-600 px-4 py-2 rounded-lg mb-4 mt-10 w-fit m-auto">Our
+        <h3 class="text-2xl font-medium text-white bg-blue-600 px-4 rounded-lg mb-4 mt-10 w-fit m-auto">Our
           Portfolio</h3>
         <p class="max-w-lg m-auto text-center">Since the beginning of my journey as a front end developer, I developed a
           lot of projects, I work remotely as
           a developer with <span class="text-blue-700">Vamill Agency</span> I love to develope services and sites for
           helping people and business, I like to <span class="text-blue-700">contribute</span> with talent people </p>
         <div class="services grid gap-2 lg:grid-cols-3 md:grid-cols-2 items-center py-10 items-stretch">
-          <img class="rounded" src="img/web1.png" alt="out projects">
-          <img class="rounded" src="img/web2.png" alt="out projects">
-          <img class="rounded" src="img/web3.png" alt="out projects">
-          <img class="rounded" src="img/web4.png" alt="out projects">
-          <img class="rounded" src="img/web5.png" alt="out projects">
-          <img class="rounded" src="img/web6.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web1.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web2.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web3.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web4.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web5.png" alt="out projects">
+          <img class="rounded hover:scale-105 duration-75" src="img/web6.png" alt="out projects">
         </div>
       </div>
     </section>
