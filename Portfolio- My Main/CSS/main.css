@@ -298,11 +298,7 @@ main .recommendations .recommendations-container {
 
 
 
-  footer {
-    width: calc(100% + 40px);
-    position: relative;
-    left: -20px;
-  }
+
   .hover-c-yellow {
     transition: .25s;
 
@@ -320,12 +316,8 @@ main .recommendations .recommendations-container {
       footer {
         padding-top: 20px;
         padding-bottom: 20px;
-        width: calc(100% + 20px);
-        position: relative;
-        left: -10px;
         flex-flow: column wrap;
         text-align: center;
-        justify-content: center;
       }
       footer * {
         margin: 0;

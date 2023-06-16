@@ -35,25 +35,25 @@ async function githubApi() {
 githubApi();
 
 // ! project
-class Projects {
-  title = "title";
-  description = "description";
-  url = "https://www.github.com/noamangg";
+// class Projects {
+//   title = "title";
+//   description = "description";
+//   url = "https://www.github.com/noamangg";
 
-  constructor(title, description) {
-    this.title = title;
-    this.description = description;
-  }
-  constructor(title, description, url) {
-    this(title, description);
-    this.url = url;
-  }
-}
+//   constructor(title, description) {
+//     this.title = title;
+//     this.description = description;
+//   }
+//   constructor(title, description, url) {
+//     this(title, description);
+//     this.url = url;
+//   }
+// }
 
 
-let noaman  = new Projects(23,23);
-noaman.title = "hello world";
-console.log(noaman);
+// let noaman  = new Projects(23,23);
+// noaman.title = "hello world";
+// console.log(noaman);
 
 // ! Date to the footer;
 async function addFooterDate() {
